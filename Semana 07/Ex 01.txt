@@ -1,0 +1,6 @@
+Exercicio 01 Semana 07
+
+ENTIDADES = cliente_id , tipo_id, categoria_id;
+ATRIBUTOS = valor, atualizado_em, cadastrado_em;
+CHAVE PRIMÁRIA = id;
+CHAVE ESTRANGEIRA = cliente_id, tipo_id, categoria_id;
