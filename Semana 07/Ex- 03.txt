@@ -1,0 +1,8 @@
+BANCO DE DADOS - É um local para de se armazenar dados.
+
+DADO - Palavras, números, simbolos sem um contexto ou lógica
+
+INFORMAÇÃO - Conjunto de dados de maneira estruturada que possui um contexto lógico.
+
+SGBD - Software responsavel por lidar com a nossa relação com o banco de dados
+facilitando criações, alterações e exclusões de dados e estruturas relacionadas ao banco de dados. 
