@@ -1,0 +1,17 @@
+Fale sobre as modelagens de dados existentes
+
+
+MODELO CONCEITUAL - É a ideia inicial demcomo vai ser estruturado o banco de dados
+
+MODELO LÓGICO - Modelo onde a gente aprofunda os conceitos dos bancos e analiza demandas para o projeto
+pensando em todas as etapas do banco 
+
+MODELOS FÍSICO - Passagem do modelo lógico para o físico , ou seja, para a criação de fato do banco de Dados.
+
+
+O que é Normalização?
+
+
+Normalização é o processo de organização de dados em um banco de dados. 
+Isso inclui a criação de tabelas e o estabelecimento de relações entre essas tabelas de acordo com as regras 
+projetadas para proteger os dados e tornar o banco de dados mais flexível, eliminando a redundância e a dependência inconsistente.
