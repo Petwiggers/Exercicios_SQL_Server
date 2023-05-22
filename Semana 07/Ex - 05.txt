@@ -1,0 +1,29 @@
+DDL
+
+CREATE
+
+CREATE TABLE Pessoa 
+{
+	Id int PRIMARY KEY IDENTITY (1,1) NOT NULL,
+	Nome varchar (200) NOT NULL,
+	Endereco varchar (200) NOT NULL,
+	Cidade varchar (200) NOT NULL
+};
+
+ALTER
+
+ALTER TABLE Pessoa ADD Estado char (2) NOT NULL;
+ALTER TABLE table_name DROP COLUMN column_name;
+ALTER TABLE table_name ALTER COLUMN column_name datatype;
+
+DROP
+
+DROP TABLE table_name;
+DROP DATABASE database_name;
+
+DML
+
+INSERT
+
+INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
+INSERT INTO table_name (column1) VALUES ('valor1'), ('valor2'), ('valor3')....); 
