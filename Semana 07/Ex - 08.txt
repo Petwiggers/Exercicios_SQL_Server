@@ -1,0 +1,13 @@
+CREATE TABLE eu (
+	ID_Eu int Identity (1,1) Primary Key,
+	Nome Varchar(150) Not Null,
+	Idade int Not Null
+);
+
+Create table MeuPai (
+	ID_Pai int IDentity (1,1) Primary Key,
+	Nome varchar (150) Not Null,
+	Idade int Not Null,
+	Filho_Id int Not Null,
+	Foreign Key (Filho_Id) References eu(ID_Eu),
+);
