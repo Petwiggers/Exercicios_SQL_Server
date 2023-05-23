@@ -1,0 +1,5 @@
+3 Restrições de Colunas no Sql Server
+
+Primary Key 
+Foreign key 
+Constraint/exemplo Not Null
