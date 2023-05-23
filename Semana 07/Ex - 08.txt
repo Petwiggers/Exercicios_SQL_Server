@@ -1,7 +1,8 @@
-CREATE TABLE eu (
-	ID_Eu int Identity (1,1) Primary Key,
+CREATE TABLE Pessoa (
+	ID_Pessoa int Identity (1,1) Primary Key,
 	Nome Varchar(150) Not Null,
-	Idade int Not Null
+	Idade int Not Null,
+	Cpf char(14) Not null Unique
 );
 
 Create table MeuPai (
@@ -9,5 +10,5 @@ Create table MeuPai (
 	Nome varchar (150) Not Null,
 	Idade int Not Null,
 	Filho_Id int Not Null,
-	Foreign Key (Filho_Id) References eu(ID_Eu),
+	Foreign Key (Filho_Id) References Pessoa(ID_Pessoa),
 );
