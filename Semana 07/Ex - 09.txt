@@ -1,0 +1,21 @@
+Create table MeuPai (
+	ID_Pai int IDentity (1,1) Primary Key,
+	Nome varchar (150) Not Null,
+	Idade int Not Null,
+	Filho_Id int Not Null,
+	Foreign Key (Filho_Id) References Pessoa(ID_Pessoa),
+);
+
+-------------------------------------------------------------
+
+Create table MeuPai (
+	ID_Pai int IDentity (1,1) Primary Key,
+	Nome varchar (150) Not Null,
+	Idade int Not Null,
+	Filho_Id int Not Null,
+	Constraint Chave_Estrangeira_filho Foreign Key (Filho_Id) References eu(ID_Eu)
+);
+
+-------------------------------------------------------------
+
+Alter table MeuPai ADD Constraint Chave_Estrangeira_Filho Foreign key References eu(ID_eu)
