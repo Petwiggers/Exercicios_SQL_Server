@@ -107,4 +107,4 @@ INSERT INTO Produto_Pedido (Id_Pedido, Id_Produto) VALUES
 	(3, 3),
 	(4, 4);
 
-
+SELECT TOP 2 Nome, Numero_Vendas FROM Produtos ORDER BY Numero_Vendas DESC;
