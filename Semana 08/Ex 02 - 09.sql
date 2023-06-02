@@ -111,3 +111,9 @@ SELECT TOP 2 Nome, Numero_Vendas FROM Produtos ORDER BY Numero_Vendas DESC;
 
 SELECT *FROM Pedidos 
 WHERE entregue = 1 AND Valor_Total > 100;
+
+SELECT C.Nome, COUNT(A.Id) AS 'Número de avaliações'
+FROM Clientes AS C
+LEFT JOIN Avaliacoes_Produtos AS A
+ON C.Id = A.Id_Cliente
+ORDER BY COUNT(A.Id) DESC
