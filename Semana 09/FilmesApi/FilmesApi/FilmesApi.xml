@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FilmesApi</name>
+    </assembly>
+    <members>
+        <member name="M:FilmesApi.Controllers.FilmesController.Get">
+            <summary>
+            Requisição de Lista mocada de filmes
+            </summary>
+            <returns>Retorna uma Lista mocada de filmes</returns>
+            <response code = "200">Sucesso no retorno da lista mocada de filmes!</response>
+        </member>
+        <member name="M:FilmesApi.Controllers.FilmesController.Get(System.Int32)">
+            <summary>
+            Requisição do item de uma lista mocada
+            </summary>
+            <param name="id">Id do filme</param>
+            <returns>Retorno do objeto Filme</returns>
+            <response code="404">Id inválido !</response>
+            <response code="200">Sucesso no retorno do objeto filme!</response>
+        </member>
+        <member name="M:FilmesApi.Controllers.FilmesController.Post(FilmesApi.Models.Filme)">
+            <summary>
+            Postando um novo filme na lista
+            </summary>
+            <param name="filme">Objeto FIlme</param>
+            <returns>Criação do Filme</returns>
+            <response code= "201">Objeto Filme postado na lista! </response>
+        </member>
+        <member name="M:FilmesApi.Controllers.FilmesController.Put(System.Int32,FilmesApi.Models.Filme)">
+            <summary>
+            Atualização de um filme da lista
+            </summary>
+            <param name="id">Id do Filme</param>
+            <param name="filme">Objeto com as novas caracteristicas do filme</param>
+            <returns>Atualização do Filme</returns>
+            <response code="404">Id não encontrado !</response>
+            <response code="204">Atualização do filme realizada com sucesso !</response>
+        </member>
+        <member name="M:FilmesApi.Controllers.FilmesController.Delete(System.Int32)">
+            <summary>
+            Remoção de um filme
+            </summary>
+            <param name="id">Id do filme</param>
+            <returns>Remoção do filme da lista !</returns>
+            <reponse code="404">Filme não encontrado</reponse>
+            <reponse code="204">Filme removido com sucesso</reponse>
+        </member>
+    </members>
+</doc>
