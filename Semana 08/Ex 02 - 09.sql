@@ -116,4 +116,12 @@ SELECT C.Nome, COUNT(A.Id) AS 'Número de avaliações'
 FROM Clientes AS C
 LEFT JOIN Avaliacoes_Produtos AS A
 ON C.Id = A.Id_Cliente
+GROUP BY C.Nome
 ORDER BY COUNT(A.Id) DESC
+
+SELECT C.Nome, I.Nome, P.Valor_Total
+FROM Clientes AS C 
+INNER JOIN Pedidos AS P
+ON C.Id = P.Id_Cliente
+INNER JOIN Produtos I 
+ON I.Nome = I.Id_Produto 
