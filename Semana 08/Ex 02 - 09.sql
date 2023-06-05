@@ -123,5 +123,48 @@ SELECT C.Nome, I.Nome, P.Valor_Total
 FROM Clientes AS C 
 INNER JOIN Pedidos AS P
 ON C.Id = P.Id_Cliente
+INNER JOIN Produto_Pedido
+ON P.Id = Produto_Pedido.Id_Pedido
 INNER JOIN Produtos I 
-ON I.Nome = I.Id_Produto 
+ON I.Id = Produto_Pedido.Id
+WHERE P.Valor_Total> 100;
+
+GO;
+
+CREATE PROCEDURE AtualizarEstoque 
+@IdProduto INT, @QuantidadeVendida INT 
+AS 
+
+	UPDATE Produtos 
+	SET Unidades = Unidades - @QuantidadeVendida,
+		Numero_Vendas = Numero_Vendas + @QuantidadeVendida
+
+	WHERE Produtos.Id = @IdProduto
+GO;
+
+SELECT Id, Unidades, Numero_Vendas FROM Produtos
+WHERE Id = 1;
+
+EXEC AtualizarEstoque @IdProduto = 1, @QuantidadeVendida = 30;
+GO;
+
+SELECT Id, Unidades, Numero_Vendas FROM Produtos
+WHERE Id = 1;
+
+CREATE VIEW vwDetalhesPedidosCliente
+AS
+	SELECT
+		p.Id,
+		c.Nome,
+		c.Email,
+		p.Valor_total,
+		p.Status
+	FROM dbo.Pedidos AS p
+	LEFT JOIN Clientes AS c
+	ON p.Id_Cliente = c.Id;
+
+SELECT * FROM vwDetalhesPedidosCliente;
+		
+
+
+
